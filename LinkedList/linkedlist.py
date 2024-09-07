@@ -19,8 +19,13 @@ class LinkedList:
     def isEmpty(self):
         return (self._head is None)
     
-    def remove(self):
-        pass
+    def remove_beg(self):
+        if (self.isEmpty()):
+            raise Exception("Linked list is empty")
+        self._head = self._head._next
+        self._size -= 1
+    def remove_end(self):
+        pass# this is not implemented yet it is a very expensive operation because we have to travel to the position befor the tail.
     
     def insert_end(self, el):
         if (self.isEmpty()):
